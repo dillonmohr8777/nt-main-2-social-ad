@@ -1,0 +1,197 @@
+/* =====================================================================
+   Neat and Tidy Tennessee — Color & Type Foundations
+   Single source of truth. Import this in any HTML doc to inherit tokens.
+   ===================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Open+Sans:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&display=swap");
+
+:root {
+  /* -----------------------------------------------------------------
+     COLOR — RAW BRAND PALETTE (from brand board)
+     ----------------------------------------------------------------- */
+  --teal-900: #0F3531;          /* deepest teal, hover/pressed */
+  --teal-800: #164C46;          /* DEEP TEAL — primary brand color */
+  --teal-700: #235E58;
+  --teal-500: #3F8B82;          /* mid teal, links, accents */
+  --teal-300: #A7D4C1;          /* FRESH MINT — soft accent */
+  --teal-100: #DCE6D8;          /* SOFT SAGE — cards, icon bg */
+  --teal-50:  #ECF1EA;          /* whisper sage, hairline panels */
+
+  --sage-100: #DCE6D8;          /* alias for soft sage */
+  --mint-100: #A7D4C1;          /* alias for fresh mint */
+
+  --cream-50: #FBFAF6;          /* lighter cream, hero washes */
+  --cream-100: #F7F6F2;         /* WARM WHITE — primary surface */
+  --cream-200: #EDEBE3;         /* warm white pressed/dividers */
+
+  --ink-900: #1F1F1F;
+  --ink-800: #333333;           /* CHARCOAL — body text */
+  --ink-600: #5C5C5A;           /* secondary text */
+  --ink-400: #8A8A86;           /* tertiary, captions */
+  --ink-200: #D9D7D0;           /* hairline borders on warm */
+
+  --success: #46A35E;           /* approval, checkmarks */
+  --success-tint: #E4F1E6;
+  --warn: #C98A2B;
+  --danger: #B5443A;
+
+  --white: #FFFFFF;
+
+  /* -----------------------------------------------------------------
+     COLOR — SEMANTIC TOKENS
+     ----------------------------------------------------------------- */
+  --bg:            var(--cream-100);  /* page background */
+  --bg-elevated:   var(--white);      /* cards, modals */
+  --bg-sunken:     var(--cream-200);  /* panels behind cards */
+  --bg-wash:       var(--teal-50);    /* tinted bands */
+  --bg-brand:      var(--teal-800);   /* dark hero / footer */
+  --bg-brand-soft: var(--teal-100);   /* sage section bg */
+  --bg-mint:       var(--teal-300);
+
+  --fg-1:          var(--ink-800);    /* primary body text */
+  --fg-2:          var(--ink-600);    /* secondary */
+  --fg-3:          var(--ink-400);    /* tertiary, captions */
+  --fg-brand:      var(--teal-800);   /* headings, branded text */
+  --fg-on-brand:   var(--cream-100);  /* text on deep teal */
+  --fg-on-mint:    var(--teal-800);
+
+  --line:          var(--ink-200);    /* hairline borders */
+  --line-soft:     var(--cream-200);
+  --line-brand:    var(--teal-800);
+
+  --accent:        var(--teal-800);   /* primary action */
+  --accent-hover:  var(--teal-900);
+  --accent-soft:   var(--teal-100);
+
+  /* -----------------------------------------------------------------
+     RADII
+     ----------------------------------------------------------------- */
+  --r-xs: 4px;
+  --r-sm: 8px;
+  --r-md: 12px;       /* default card */
+  --r-lg: 18px;       /* hero panels, large cards */
+  --r-xl: 28px;       /* feature panels */
+  --r-pill: 999px;    /* buttons, badges */
+
+  /* -----------------------------------------------------------------
+     SHADOWS — calm, never harsh. Warm-tinted.
+     ----------------------------------------------------------------- */
+  --shadow-xs: 0 1px 2px rgba(22, 76, 70, 0.06);
+  --shadow-sm: 0 2px 6px rgba(22, 76, 70, 0.07), 0 1px 2px rgba(22, 76, 70, 0.04);
+  --shadow-md: 0 8px 20px rgba(22, 76, 70, 0.09), 0 2px 6px rgba(22, 76, 70, 0.05);
+  --shadow-lg: 0 18px 40px rgba(22, 76, 70, 0.12), 0 4px 10px rgba(22, 76, 70, 0.06);
+  --shadow-inset: inset 0 0 0 1px rgba(22, 76, 70, 0.08);
+
+  /* -----------------------------------------------------------------
+     SPACING — 4px base, 1.5 rhythm
+     ----------------------------------------------------------------- */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+  --s-12: 48px;
+  --s-16: 64px;
+  --s-20: 80px;
+  --s-24: 96px;
+
+  /* -----------------------------------------------------------------
+     TYPOGRAPHY — FAMILIES
+     Headlines: Playfair Display (warm serif, polished + friendly)
+     UI/Body:   Open Sans (clean, readable, approachable)
+     Eyebrow:   Montserrat (small caps, tracking)
+     ----------------------------------------------------------------- */
+  --font-serif:  "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  --font-sans:   "Open Sans", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-eyebrow:"Montserrat", "Open Sans", sans-serif;
+
+  /* TYPE SCALE (rem-based, page root = 16px) */
+  --fs-display:   clamp(40px, 5.6vw, 72px);
+  --fs-h1:        clamp(32px, 3.8vw, 52px);
+  --fs-h2:        clamp(26px, 2.6vw, 36px);
+  --fs-h3:        22px;
+  --fs-h4:        18px;
+  --fs-body-lg:   18px;
+  --fs-body:      16px;
+  --fs-body-sm:   14px;
+  --fs-caption:   12px;
+  --fs-eyebrow:   12px;
+
+  --lh-tight: 1.1;
+  --lh-snug:  1.25;
+  --lh-body:  1.55;
+  --lh-loose: 1.7;
+
+  --tracking-eyebrow: 0.18em;
+  --tracking-tight:   -0.01em;
+
+  /* -----------------------------------------------------------------
+     MOTION
+     ----------------------------------------------------------------- */
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 140ms;
+  --dur-base: 240ms;
+  --dur-slow: 480ms;
+}
+
+/* =====================================================================
+   SEMANTIC ELEMENT STYLES — sane defaults so plain HTML feels on-brand
+   ===================================================================== */
+html { font-size: 16px; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg-1);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, .display, .h1, .h2, .h3 {
+  font-family: var(--font-serif);
+  color: var(--fg-brand);
+  font-weight: 500;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--lh-tight);
+  margin: 0 0 var(--s-4);
+  text-wrap: pretty;
+}
+.display { font-size: var(--fs-display); }
+h1, .h1 { font-size: var(--fs-h1); }
+h2, .h2 { font-size: var(--fs-h2); line-height: var(--lh-snug); }
+h3, .h3 { font-size: var(--fs-h3); line-height: var(--lh-snug); }
+
+h4, .h4 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-h4);
+  font-weight: 600;
+  color: var(--fg-1);
+  line-height: var(--lh-snug);
+  margin: 0 0 var(--s-3);
+}
+
+p, .body { font-size: var(--fs-body); color: var(--fg-1); line-height: var(--lh-body); margin: 0 0 var(--s-4); }
+.body-lg { font-size: var(--fs-body-lg); line-height: var(--lh-loose); }
+.body-sm { font-size: var(--fs-body-sm); color: var(--fg-2); }
+.caption { font-size: var(--fs-caption); color: var(--fg-3); }
+
+.eyebrow {
+  font-family: var(--font-eyebrow);
+  font-size: var(--fs-eyebrow);
+  font-weight: 600;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--fg-brand);
+}
+
+a { color: var(--teal-700); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { color: var(--teal-900); text-decoration-thickness: 2px; }
+
+::selection { background: var(--teal-300); color: var(--teal-900); }
